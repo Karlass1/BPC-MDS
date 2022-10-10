@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="cs" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>sStudents</title>
+</head>
+<tbody>
+ <div th:if="${students.isEmpty()}">
+   <table>
+   <th><b>ID</b></th>
+   <th><b>Name</b></th>
+   <th><b>Surname</b></th>
+   <th><b>Year</b></th>
+
+     <tr th:each="student : ${students}">
+       <td th:text="${student.id}"/>
+       <td th:text="${student.name}"/>
+       <td th:text="${student.surname}"/>
+       <td th:text="${student.year}"/>
+     </tr>
+   </table>
+ </div>
+
+<div th:unless="$students.isEmpty()}" />
+</tbody>
+</html>
