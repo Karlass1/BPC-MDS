@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="cs" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>MP4</title>
+</head>
+<body>
+    <h2>Prehravani MP4 streamu: <u>Ramis, 231110</u></h2>
+    <video th:width="${width}" th:muted="${muted}" th:autoplay="${autoplay}" controls poster="https://raw.githubusercontent.com/ENeMy235/MDS/main/Screen1.jpg">
+        <source th:src="${url}" type="video/mp4">
+    </video>
+</body>
+</html>
